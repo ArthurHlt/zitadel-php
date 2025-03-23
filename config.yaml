@@ -1,0 +1,6 @@
+additionalProperties:
+  srcBasePath: src
+  variableNamingConvention: camelCase
+  packageName: zitadel-php
+  invokerPackage: ArthurHlt\Zitadel
+

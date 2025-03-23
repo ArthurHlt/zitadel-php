@@ -1,0 +1,11 @@
+# # Orgv2betaAddOrganizationRequestAdmin
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**userId** | **string** |  | [optional]
+**human** | [**\ArthurHlt\Zitadel\Model\Userv2betaAddHumanUserRequest**](Userv2betaAddHumanUserRequest.md) |  | [optional]
+**roles** | **string[]** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

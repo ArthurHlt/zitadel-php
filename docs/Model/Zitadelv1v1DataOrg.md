@@ -1,0 +1,47 @@
+# # Zitadelv1v1DataOrg
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**orgId** | **string** |  | [optional]
+**org** | [**\ArthurHlt\Zitadel\Model\V1AddOrgRequest**](V1AddOrgRequest.md) |  | [optional]
+**iamPolicy** | [**\ArthurHlt\Zitadel\Model\Zitadelv1v1AddCustomOrgIAMPolicyRequest**](Zitadelv1v1AddCustomOrgIAMPolicyRequest.md) |  | [optional]
+**labelPolicy** | [**\ArthurHlt\Zitadel\Model\V1AddCustomLabelPolicyRequest**](V1AddCustomLabelPolicyRequest.md) |  | [optional]
+**lockoutPolicy** | [**\ArthurHlt\Zitadel\Model\V1AddCustomLockoutPolicyRequest**](V1AddCustomLockoutPolicyRequest.md) |  | [optional]
+**loginPolicy** | [**\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyRequest**](V1AddCustomLoginPolicyRequest.md) |  | [optional]
+**passwordComplexityPolicy** | [**\ArthurHlt\Zitadel\Model\V1AddCustomPasswordComplexityPolicyRequest**](V1AddCustomPasswordComplexityPolicyRequest.md) |  | [optional]
+**privacyPolicy** | [**\ArthurHlt\Zitadel\Model\V1AddCustomPrivacyPolicyRequest**](V1AddCustomPrivacyPolicyRequest.md) |  | [optional]
+**projects** | [**\ArthurHlt\Zitadel\Model\V1DataProject[]**](V1DataProject.md) |  | [optional]
+**projectRoles** | [**\ArthurHlt\Zitadel\Model\V1AddProjectRoleRequest[]**](V1AddProjectRoleRequest.md) |  | [optional]
+**apiApps** | [**\ArthurHlt\Zitadel\Model\V1DataAPIApplication[]**](V1DataAPIApplication.md) |  | [optional]
+**oidcApps** | [**\ArthurHlt\Zitadel\Model\V1DataOIDCApplication[]**](V1DataOIDCApplication.md) |  | [optional]
+**humanUsers** | [**\ArthurHlt\Zitadel\Model\V1DataHumanUser[]**](V1DataHumanUser.md) |  | [optional]
+**machineUsers** | [**\ArthurHlt\Zitadel\Model\V1DataMachineUser[]**](V1DataMachineUser.md) |  | [optional]
+**triggerActions** | [**\ArthurHlt\Zitadel\Model\Zitadelv1v1SetTriggerActionsRequest[]**](Zitadelv1v1SetTriggerActionsRequest.md) |  | [optional]
+**actions** | [**\ArthurHlt\Zitadel\Model\V1DataAction[]**](V1DataAction.md) |  | [optional]
+**projectGrants** | [**\ArthurHlt\Zitadel\Model\V1DataProjectGrant[]**](V1DataProjectGrant.md) |  | [optional]
+**userGrants** | [**\ArthurHlt\Zitadel\Model\V1AddUserGrantRequest[]**](V1AddUserGrantRequest.md) |  | [optional]
+**orgMembers** | [**\ArthurHlt\Zitadel\Model\V1AddOrgMemberRequest[]**](V1AddOrgMemberRequest.md) |  | [optional]
+**projectMembers** | [**\ArthurHlt\Zitadel\Model\V1AddProjectMemberRequest[]**](V1AddProjectMemberRequest.md) |  | [optional]
+**projectGrantMembers** | [**\ArthurHlt\Zitadel\Model\V1AddProjectGrantMemberRequest[]**](V1AddProjectGrantMemberRequest.md) |  | [optional]
+**userMetadata** | [**\ArthurHlt\Zitadel\Model\V1SetUserMetadataRequest[]**](V1SetUserMetadataRequest.md) |  | [optional]
+**loginTexts** | [**\ArthurHlt\Zitadel\Model\Zitadelmanagementv1SetCustomLoginTextsRequest[]**](Zitadelmanagementv1SetCustomLoginTextsRequest.md) |  | [optional]
+**initMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextRequest[]**](V1SetCustomInitMessageTextRequest.md) |  | [optional]
+**passwordResetMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextRequest[]**](V1SetCustomPasswordResetMessageTextRequest.md) |  | [optional]
+**verifyEmailMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextRequest[]**](V1SetCustomVerifyEmailMessageTextRequest.md) |  | [optional]
+**verifyPhoneMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextRequest[]**](V1SetCustomVerifyPhoneMessageTextRequest.md) |  | [optional]
+**domainClaimedMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextRequest[]**](V1SetCustomDomainClaimedMessageTextRequest.md) |  | [optional]
+**passwordlessRegistrationMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextRequest[]**](V1SetCustomPasswordlessRegistrationMessageTextRequest.md) |  | [optional]
+**oidcIdps** | [**\ArthurHlt\Zitadel\Model\V1DataOIDCIDP[]**](V1DataOIDCIDP.md) |  | [optional]
+**jwtIdps** | [**\ArthurHlt\Zitadel\Model\V1DataJWTIDP[]**](V1DataJWTIDP.md) |  | [optional]
+**secondFactors** | [**\ArthurHlt\Zitadel\Model\Zitadelmanagementv1AddSecondFactorToLoginPolicyRequest[]**](Zitadelmanagementv1AddSecondFactorToLoginPolicyRequest.md) |  | [optional]
+**multiFactors** | [**\ArthurHlt\Zitadel\Model\Zitadelmanagementv1AddMultiFactorToLoginPolicyRequest[]**](Zitadelmanagementv1AddMultiFactorToLoginPolicyRequest.md) |  | [optional]
+**idps** | [**\ArthurHlt\Zitadel\Model\Zitadelmanagementv1AddIDPToLoginPolicyRequest[]**](Zitadelmanagementv1AddIDPToLoginPolicyRequest.md) |  | [optional]
+**userLinks** | [**\ArthurHlt\Zitadel\Model\V1IDPUserLink[]**](V1IDPUserLink.md) |  | [optional]
+**domains** | [**\ArthurHlt\Zitadel\Model\Zitadelorgv1Domain[]**](Zitadelorgv1Domain.md) |  | [optional]
+**appKeys** | [**\ArthurHlt\Zitadel\Model\V1DataAppKey[]**](V1DataAppKey.md) |  | [optional]
+**machineKeys** | [**\ArthurHlt\Zitadel\Model\V1DataMachineKey[]**](V1DataMachineKey.md) |  | [optional]
+**inviteUserMessages** | [**\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextRequest[]**](V1SetCustomInviteUserMessageTextRequest.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

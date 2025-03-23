@@ -1,0 +1,43 @@
+# # V1ManagementServiceSetCustomLoginTextBody
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**selectAccountText** | [**\ArthurHlt\Zitadel\Model\V1SelectAccountScreenText**](V1SelectAccountScreenText.md) |  | [optional]
+**loginText** | [**\ArthurHlt\Zitadel\Model\V1LoginScreenText**](V1LoginScreenText.md) |  | [optional]
+**passwordText** | [**\ArthurHlt\Zitadel\Model\V1PasswordScreenText**](V1PasswordScreenText.md) |  | [optional]
+**usernameChangeText** | [**\ArthurHlt\Zitadel\Model\V1UsernameChangeScreenText**](V1UsernameChangeScreenText.md) |  | [optional]
+**usernameChangeDoneText** | [**\ArthurHlt\Zitadel\Model\V1UsernameChangeDoneScreenText**](V1UsernameChangeDoneScreenText.md) |  | [optional]
+**initPasswordText** | [**\ArthurHlt\Zitadel\Model\V1InitPasswordScreenText**](V1InitPasswordScreenText.md) |  | [optional]
+**initPasswordDoneText** | [**\ArthurHlt\Zitadel\Model\V1InitPasswordDoneScreenText**](V1InitPasswordDoneScreenText.md) |  | [optional]
+**emailVerificationText** | [**\ArthurHlt\Zitadel\Model\V1EmailVerificationScreenText**](V1EmailVerificationScreenText.md) |  | [optional]
+**emailVerificationDoneText** | [**\ArthurHlt\Zitadel\Model\V1EmailVerificationDoneScreenText**](V1EmailVerificationDoneScreenText.md) |  | [optional]
+**initializeUserText** | [**\ArthurHlt\Zitadel\Model\V1InitializeUserScreenText**](V1InitializeUserScreenText.md) |  | [optional]
+**initializeDoneText** | [**\ArthurHlt\Zitadel\Model\V1InitializeUserDoneScreenText**](V1InitializeUserDoneScreenText.md) |  | [optional]
+**initMfaPromptText** | [**\ArthurHlt\Zitadel\Model\V1InitMFAPromptScreenText**](V1InitMFAPromptScreenText.md) |  | [optional]
+**initMfaOtpText** | [**\ArthurHlt\Zitadel\Model\V1InitMFAOTPScreenText**](V1InitMFAOTPScreenText.md) |  | [optional]
+**initMfaU2fText** | [**\ArthurHlt\Zitadel\Model\V1InitMFAU2FScreenText**](V1InitMFAU2FScreenText.md) |  | [optional]
+**initMfaDoneText** | [**\ArthurHlt\Zitadel\Model\V1InitMFADoneScreenText**](V1InitMFADoneScreenText.md) |  | [optional]
+**mfaProvidersText** | [**\ArthurHlt\Zitadel\Model\V1MFAProvidersText**](V1MFAProvidersText.md) |  | [optional]
+**verifyMfaOtpText** | [**\ArthurHlt\Zitadel\Model\V1VerifyMFAOTPScreenText**](V1VerifyMFAOTPScreenText.md) |  | [optional]
+**verifyMfaU2fText** | [**\ArthurHlt\Zitadel\Model\V1VerifyMFAU2FScreenText**](V1VerifyMFAU2FScreenText.md) |  | [optional]
+**passwordlessText** | [**\ArthurHlt\Zitadel\Model\V1PasswordlessScreenText**](V1PasswordlessScreenText.md) |  | [optional]
+**passwordChangeText** | [**\ArthurHlt\Zitadel\Model\V1PasswordChangeScreenText**](V1PasswordChangeScreenText.md) |  | [optional]
+**passwordChangeDoneText** | [**\ArthurHlt\Zitadel\Model\V1PasswordChangeDoneScreenText**](V1PasswordChangeDoneScreenText.md) |  | [optional]
+**passwordResetDoneText** | [**\ArthurHlt\Zitadel\Model\V1PasswordResetDoneScreenText**](V1PasswordResetDoneScreenText.md) |  | [optional]
+**registrationOptionText** | [**\ArthurHlt\Zitadel\Model\V1RegistrationOptionScreenText**](V1RegistrationOptionScreenText.md) |  | [optional]
+**registrationUserText** | [**\ArthurHlt\Zitadel\Model\V1RegistrationUserScreenText**](V1RegistrationUserScreenText.md) |  | [optional]
+**registrationOrgText** | [**\ArthurHlt\Zitadel\Model\V1RegistrationOrgScreenText**](V1RegistrationOrgScreenText.md) |  | [optional]
+**linkingUserDoneText** | [**\ArthurHlt\Zitadel\Model\V1LinkingUserDoneScreenText**](V1LinkingUserDoneScreenText.md) |  | [optional]
+**externalUserNotFoundText** | [**\ArthurHlt\Zitadel\Model\V1ExternalUserNotFoundScreenText**](V1ExternalUserNotFoundScreenText.md) |  | [optional]
+**successLoginText** | [**\ArthurHlt\Zitadel\Model\V1SuccessLoginScreenText**](V1SuccessLoginScreenText.md) |  | [optional]
+**logoutText** | [**\ArthurHlt\Zitadel\Model\V1LogoutDoneScreenText**](V1LogoutDoneScreenText.md) |  | [optional]
+**footerText** | [**\ArthurHlt\Zitadel\Model\V1FooterText**](V1FooterText.md) |  | [optional]
+**passwordlessPromptText** | [**\ArthurHlt\Zitadel\Model\V1PasswordlessPromptScreenText**](V1PasswordlessPromptScreenText.md) |  | [optional]
+**passwordlessRegistrationText** | [**\ArthurHlt\Zitadel\Model\V1PasswordlessRegistrationScreenText**](V1PasswordlessRegistrationScreenText.md) |  | [optional]
+**passwordlessRegistrationDoneText** | [**\ArthurHlt\Zitadel\Model\V1PasswordlessRegistrationDoneScreenText**](V1PasswordlessRegistrationDoneScreenText.md) |  | [optional]
+**externalRegistrationUserOverviewText** | [**\ArthurHlt\Zitadel\Model\V1ExternalRegistrationUserOverviewScreenText**](V1ExternalRegistrationUserOverviewScreenText.md) |  | [optional]
+**linkingUserPromptText** | [**\ArthurHlt\Zitadel\Model\V1LinkingUserPromptScreenText**](V1LinkingUserPromptScreenText.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

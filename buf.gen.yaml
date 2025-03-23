@@ -1,0 +1,23 @@
+version: v2
+clean: true
+managed:
+  enabled: true
+#  override:
+#    - file_option: php_namespace
+#      value: ArthurHlt\\Zitadel
+plugins:
+  #  - remote: buf.build/protocolbuffers/php:v30.1
+  #    out: src/
+  #  - remote: buf.build/grpc/php:v1.71.0
+  #    out: src/
+  - remote: buf.build/grpc-ecosystem/openapiv2:v2.26.3
+    out: openapiv2/
+    opt:
+      - allow_delete_body
+      - allow_merge
+
+inputs:
+  - git_repo: https://github.com/zitadel/zitadel
+    tag: v2.71.4
+    depth: 1
+    subdir: proto
