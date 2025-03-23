@@ -1,6 +1,6 @@
 {
   "name": "arthurhlt/zitadel-php",
-  "description": "The management API is as the name states the interface where systems can mutate IAM objects like organizations, projects, clients, users and so on if they have the necessary access rights.",
+  "description": "Zitadel php client for interacting with the Zitadel API.",
   "keywords": [
     "openapitools",
     "openapi-generator",

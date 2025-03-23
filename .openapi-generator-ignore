@@ -25,3 +25,4 @@ composer.json
 composer.lock
 .php-cs-fixer.dist.php
 README.md
+.travis.yml
