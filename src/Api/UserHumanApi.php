@@ -183,7 +183,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceAddPasswordlessRegistration($userId, $xZitadelOrgid = null)
     {
@@ -201,7 +201,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceAddPasswordlessRegistrationWithHttpInfo($userId, $xZitadelOrgid = null)
     {
@@ -246,6 +246,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -276,6 +312,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1AddPasswordlessRegistrationResponse',
@@ -1331,7 +1391,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceImportHumanUser($body, $xZitadelOrgid = null)
     {
@@ -1349,7 +1409,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceImportHumanUserWithHttpInfo($body, $xZitadelOrgid = null)
     {
@@ -1394,6 +1454,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1424,6 +1520,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ImportHumanUserResponse',
@@ -1616,7 +1736,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceListHumanAuthFactors($userId, $xZitadelOrgid = null)
     {
@@ -1634,7 +1754,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceListHumanAuthFactorsWithHttpInfo($userId, $xZitadelOrgid = null)
     {
@@ -1679,6 +1799,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1709,6 +1865,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ListHumanAuthFactorsResponse',
@@ -1903,7 +2083,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceListHumanPasswordless($userId, $xZitadelOrgid = null)
     {
@@ -1921,7 +2101,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceListHumanPasswordlessWithHttpInfo($userId, $xZitadelOrgid = null)
     {
@@ -1966,6 +2146,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1996,6 +2212,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ListHumanPasswordlessResponse',
@@ -4238,7 +4478,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceResendHumanEmailVerification($userId, $body, $xZitadelOrgid = null)
     {
@@ -4257,7 +4497,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceResendHumanEmailVerificationWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -4302,6 +4542,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4332,6 +4608,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ResendHumanEmailVerificationResponse',
@@ -4542,7 +4842,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceResendHumanInitialization($userId, $body, $xZitadelOrgid = null)
     {
@@ -4561,7 +4861,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceResendHumanInitializationWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -4606,6 +4906,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4636,6 +4972,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ResendHumanInitializationResponse',
@@ -4846,7 +5206,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceResendHumanPhoneVerification($userId, $body, $xZitadelOrgid = null)
     {
@@ -4865,7 +5225,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceResendHumanPhoneVerificationWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -4910,6 +5270,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4940,6 +5336,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ResendHumanPhoneVerificationResponse',
@@ -5150,7 +5570,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSendHumanResetPasswordNotification($userId, $body, $xZitadelOrgid = null)
     {
@@ -5169,7 +5589,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSendHumanResetPasswordNotificationWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -5214,6 +5634,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5244,6 +5700,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SendHumanResetPasswordNotificationResponse',
@@ -5454,7 +5934,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSendPasswordlessRegistration($userId, $body, $xZitadelOrgid = null)
     {
@@ -5473,7 +5953,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSendPasswordlessRegistrationWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -5518,6 +5998,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5548,6 +6064,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SendPasswordlessRegistrationResponse',
@@ -5758,7 +6298,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetHumanInitialPassword($userId, $body, $xZitadelOrgid = null)
     {
@@ -5777,7 +6317,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetHumanInitialPasswordWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -5822,6 +6362,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5852,6 +6428,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetHumanInitialPasswordResponse',
@@ -6062,7 +6662,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetHumanPassword($userId, $body, $xZitadelOrgid = null)
     {
@@ -6081,7 +6681,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetHumanPasswordWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -6126,6 +6726,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6156,6 +6792,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetHumanPasswordResponse',
@@ -6366,7 +7026,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateHumanEmail($userId, $body, $xZitadelOrgid = null)
     {
@@ -6385,7 +7045,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateHumanEmailWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -6430,6 +7090,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6460,6 +7156,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateHumanEmailResponse',
@@ -6670,7 +7390,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateHumanPhone($userId, $body, $xZitadelOrgid = null)
     {
@@ -6689,7 +7409,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateHumanPhoneWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -6734,6 +7454,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6764,6 +7520,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateHumanPhoneResponse',
@@ -6974,7 +7754,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateHumanProfile($userId, $body, $xZitadelOrgid = null)
     {
@@ -6993,7 +7773,7 @@ class UserHumanApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateHumanProfileWithHttpInfo($userId, $body, $xZitadelOrgid = null)
     {
@@ -7038,6 +7818,42 @@ class UserHumanApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -7068,6 +7884,30 @@ class UserHumanApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateHumanProfileResponse',

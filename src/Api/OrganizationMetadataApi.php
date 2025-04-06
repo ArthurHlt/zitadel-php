@@ -468,7 +468,7 @@ class OrganizationMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceBulkSetOrgMetadata($body, $xZitadelOrgid = null)
     {
@@ -486,7 +486,7 @@ class OrganizationMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceBulkSetOrgMetadataWithHttpInfo($body, $xZitadelOrgid = null)
     {
@@ -531,6 +531,42 @@ class OrganizationMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -561,6 +597,30 @@ class OrganizationMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1BulkSetOrgMetadataResponse',
@@ -1040,7 +1100,7 @@ class OrganizationMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceListOrgMetadata($body, $xZitadelOrgid = null)
     {
@@ -1058,7 +1118,7 @@ class OrganizationMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceListOrgMetadataWithHttpInfo($body, $xZitadelOrgid = null)
     {
@@ -1103,6 +1163,42 @@ class OrganizationMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1133,6 +1229,30 @@ class OrganizationMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ListOrgMetadataResponse',
@@ -1613,7 +1733,7 @@ class OrganizationMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetOrgMetadata($key, $body, $xZitadelOrgid = null)
     {
@@ -1632,7 +1752,7 @@ class OrganizationMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetOrgMetadataWithHttpInfo($key, $body, $xZitadelOrgid = null)
     {
@@ -1677,6 +1797,42 @@ class OrganizationMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1707,6 +1863,30 @@ class OrganizationMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetOrgMetadataResponse',

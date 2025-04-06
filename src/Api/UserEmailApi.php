@@ -441,7 +441,7 @@ class UserEmailApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function authServiceResendMyEmailVerification($body)
     {
@@ -458,7 +458,7 @@ class UserEmailApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function authServiceResendMyEmailVerificationWithHttpInfo($body)
     {
@@ -503,6 +503,42 @@ class UserEmailApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -533,6 +569,30 @@ class UserEmailApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ResendMyEmailVerificationResponse',
@@ -717,7 +777,7 @@ class UserEmailApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function authServiceSetMyEmail($body)
     {
@@ -734,7 +794,7 @@ class UserEmailApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function authServiceSetMyEmailWithHttpInfo($body)
     {
@@ -779,6 +839,42 @@ class UserEmailApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -809,6 +905,30 @@ class UserEmailApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetMyEmailResponse',
@@ -993,7 +1113,7 @@ class UserEmailApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function authServiceVerifyMyEmail($body)
     {
@@ -1010,7 +1130,7 @@ class UserEmailApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function authServiceVerifyMyEmailWithHttpInfo($body)
     {
@@ -1055,6 +1175,42 @@ class UserEmailApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1085,6 +1241,30 @@ class UserEmailApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1VerifyMyEmailResponse',

@@ -460,7 +460,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function authServiceListMyMetadata($body)
     {
@@ -477,7 +477,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function authServiceListMyMetadataWithHttpInfo($body)
     {
@@ -522,6 +522,42 @@ class UserMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -552,6 +588,30 @@ class UserMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ListMyMetadataResponse',
@@ -1042,7 +1102,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceBulkSetUserMetadata($id, $body, $xZitadelOrgid = null)
     {
@@ -1061,7 +1121,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceBulkSetUserMetadataWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -1106,6 +1166,42 @@ class UserMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1136,6 +1232,30 @@ class UserMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1BulkSetUserMetadataResponse',
@@ -1652,7 +1772,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceListUserMetadata($id, $body, $xZitadelOrgid = null)
     {
@@ -1671,7 +1791,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceListUserMetadataWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -1716,6 +1836,42 @@ class UserMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1746,6 +1902,30 @@ class UserMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ListUserMetadataResponse',
@@ -2263,7 +2443,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetUserMetadata($id, $key, $body, $xZitadelOrgid = null)
     {
@@ -2283,7 +2463,7 @@ class UserMetadataApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetUserMetadataWithHttpInfo($id, $key, $body, $xZitadelOrgid = null)
     {
@@ -2328,6 +2508,42 @@ class UserMetadataApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2358,6 +2574,30 @@ class UserMetadataApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetUserMetadataResponse',

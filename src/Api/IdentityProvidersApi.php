@@ -182,7 +182,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddAppleProvider($body)
     {
@@ -199,7 +199,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddAppleProviderWithHttpInfo($body)
     {
@@ -244,6 +244,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -274,6 +310,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAppleProviderResponse',
@@ -458,7 +518,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddAzureADProvider($body)
     {
@@ -475,7 +535,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddAzureADProviderWithHttpInfo($body)
     {
@@ -520,6 +580,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -550,6 +646,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddAzureADProviderResponse',
@@ -734,7 +854,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGenericOAuthProvider($body)
     {
@@ -751,7 +871,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGenericOAuthProviderWithHttpInfo($body)
     {
@@ -796,6 +916,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -826,6 +982,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOAuthProviderResponse',
@@ -1010,7 +1190,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGenericOIDCProvider($body)
     {
@@ -1027,7 +1207,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGenericOIDCProviderWithHttpInfo($body)
     {
@@ -1072,6 +1252,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1102,6 +1318,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGenericOIDCProviderResponse',
@@ -1286,7 +1526,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGitHubEnterpriseServerProvider($body)
     {
@@ -1303,7 +1543,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGitHubEnterpriseServerProviderWithHttpInfo($body)
     {
@@ -1348,6 +1588,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1378,6 +1654,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubEnterpriseServerProviderResponse',
@@ -1562,7 +1862,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGitHubProvider($body)
     {
@@ -1579,7 +1879,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGitHubProviderWithHttpInfo($body)
     {
@@ -1624,6 +1924,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1654,6 +1990,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitHubProviderResponse',
@@ -1838,7 +2198,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGitLabProvider($body)
     {
@@ -1855,7 +2215,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGitLabProviderWithHttpInfo($body)
     {
@@ -1900,6 +2260,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1930,6 +2326,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabProviderResponse',
@@ -2114,7 +2534,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGitLabSelfHostedProvider($body)
     {
@@ -2131,7 +2551,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGitLabSelfHostedProviderWithHttpInfo($body)
     {
@@ -2176,6 +2596,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2206,6 +2662,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGitLabSelfHostedProviderResponse',
@@ -2390,7 +2870,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddGoogleProvider($body)
     {
@@ -2407,7 +2887,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddGoogleProviderWithHttpInfo($body)
     {
@@ -2452,6 +2932,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2482,6 +2998,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddGoogleProviderResponse',
@@ -2666,7 +3206,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddIDPToLoginPolicy($body)
     {
@@ -2683,7 +3223,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddIDPToLoginPolicyWithHttpInfo($body)
     {
@@ -2728,6 +3268,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2758,6 +3334,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
@@ -2942,7 +3542,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddJWTIDP($body)
     {
@@ -2959,7 +3559,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddJWTIDPWithHttpInfo($body)
     {
@@ -3016,6 +3616,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3057,6 +3693,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddJWTIDPResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3238,7 +3898,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddJWTProvider($body)
     {
@@ -3255,7 +3915,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddJWTProviderWithHttpInfo($body)
     {
@@ -3300,6 +3960,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3330,6 +4026,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddJWTProviderResponse',
@@ -3514,7 +4234,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddLDAPProvider($body)
     {
@@ -3531,7 +4251,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddLDAPProviderWithHttpInfo($body)
     {
@@ -3576,6 +4296,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3606,6 +4362,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddLDAPProviderResponse',
@@ -3790,7 +4570,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddOIDCIDP($body)
     {
@@ -3807,7 +4587,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddOIDCIDPWithHttpInfo($body)
     {
@@ -3864,6 +4644,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3905,6 +4721,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddOIDCIDPResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4086,7 +4926,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddSAMLProvider($body)
     {
@@ -4103,7 +4943,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddSAMLProviderWithHttpInfo($body)
     {
@@ -4148,6 +4988,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4178,6 +5054,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSAMLProviderResponse',
@@ -4362,7 +5262,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceDeactivateIDP($idpId1)
     {
@@ -4379,7 +5279,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceDeactivateIDPWithHttpInfo($idpId1)
     {
@@ -4436,6 +5336,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4477,6 +5413,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1DeactivateIDPResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5514,7 +6474,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceListIDPs($body)
     {
@@ -5531,7 +6491,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\V1ListIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceListIDPsWithHttpInfo($body)
     {
@@ -5588,6 +6548,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ListIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ListIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5629,6 +6625,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ListIDPsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5810,7 +6830,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceListLoginPolicyIDPs($body)
     {
@@ -5827,7 +6847,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceListLoginPolicyIDPsWithHttpInfo($body)
     {
@@ -5872,6 +6892,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5902,6 +6958,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
@@ -6086,7 +7166,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceListProviders($body)
     {
@@ -6103,7 +7183,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceListProvidersWithHttpInfo($body)
     {
@@ -6148,6 +7228,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6178,6 +7294,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListProvidersResponse',
@@ -6363,7 +7503,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceMigrateGenericOIDCProvider($id1, $body)
     {
@@ -6381,7 +7521,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceMigrateGenericOIDCProviderWithHttpInfo($id1, $body)
     {
@@ -6426,6 +7566,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6456,6 +7632,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1MigrateGenericOIDCProviderResponse',
@@ -6657,7 +7857,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceReactivateIDP($idpId1)
     {
@@ -6674,7 +7874,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceReactivateIDPWithHttpInfo($idpId1)
     {
@@ -6731,6 +7931,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6772,6 +8008,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ReactivateIDPResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6956,7 +8216,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceRegenerateSAMLProviderCertificate($id1, $body)
     {
@@ -6974,7 +8234,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceRegenerateSAMLProviderCertificateWithHttpInfo($id1, $body)
     {
@@ -7019,6 +8279,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -7049,6 +8345,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1RegenerateSAMLProviderCertificateResponse',
@@ -7827,7 +9147,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateAppleProvider($id1, $body)
     {
@@ -7845,7 +9165,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateAppleProviderWithHttpInfo($id1, $body)
     {
@@ -7890,6 +9210,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -7920,6 +9276,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAppleProviderResponse',
@@ -8122,7 +9502,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateAzureADProvider($id1, $body)
     {
@@ -8140,7 +9520,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateAzureADProviderWithHttpInfo($id1, $body)
     {
@@ -8185,6 +9565,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -8215,6 +9631,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateAzureADProviderResponse',
@@ -8417,7 +9857,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGenericOAuthProvider($id1, $body)
     {
@@ -8435,7 +9875,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGenericOAuthProviderWithHttpInfo($id1, $body)
     {
@@ -8480,6 +9920,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -8510,6 +9986,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOAuthProviderResponse',
@@ -8712,7 +10212,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGenericOIDCProvider($id1, $body)
     {
@@ -8730,7 +10230,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGenericOIDCProviderWithHttpInfo($id1, $body)
     {
@@ -8775,6 +10275,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -8805,6 +10341,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGenericOIDCProviderResponse',
@@ -9007,7 +10567,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGitHubEnterpriseServerProvider($id1, $body)
     {
@@ -9025,7 +10585,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGitHubEnterpriseServerProviderWithHttpInfo($id1, $body)
     {
@@ -9070,6 +10630,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9100,6 +10696,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubEnterpriseServerProviderResponse',
@@ -9302,7 +10922,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGitHubProvider($id1, $body)
     {
@@ -9320,7 +10940,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGitHubProviderWithHttpInfo($id1, $body)
     {
@@ -9365,6 +10985,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9395,6 +11051,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitHubProviderResponse',
@@ -9597,7 +11277,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGitLabProvider($id, $body)
     {
@@ -9615,7 +11295,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGitLabProviderWithHttpInfo($id, $body)
     {
@@ -9660,6 +11340,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9690,6 +11406,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabProviderResponse',
@@ -9892,7 +11632,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGitLabSelfHostedProvider($id, $body)
     {
@@ -9910,7 +11650,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGitLabSelfHostedProviderWithHttpInfo($id, $body)
     {
@@ -9955,6 +11695,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9985,6 +11761,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGitLabSelfHostedProviderResponse',
@@ -10187,7 +11987,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateGoogleProvider($id1, $body)
     {
@@ -10205,7 +12005,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateGoogleProviderWithHttpInfo($id1, $body)
     {
@@ -10250,6 +12050,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10280,6 +12116,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateGoogleProviderResponse',
@@ -10482,7 +12342,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateIDP($idpId1, $body)
     {
@@ -10500,7 +12360,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateIDPWithHttpInfo($idpId1, $body)
     {
@@ -10557,6 +12417,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10598,6 +12494,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10797,7 +12717,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateIDPJWTConfig($idpId1, $body)
     {
@@ -10815,7 +12735,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateIDPJWTConfigWithHttpInfo($idpId1, $body)
     {
@@ -10884,6 +12804,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10933,6 +12889,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPJWTConfigResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11132,7 +13112,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateIDPOIDCConfig($idpId1, $body)
     {
@@ -11150,7 +13130,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateIDPOIDCConfigWithHttpInfo($idpId1, $body)
     {
@@ -11219,6 +13199,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -11268,6 +13284,30 @@ class IdentityProvidersApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateIDPOIDCConfigResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11467,7 +13507,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateJWTProvider($id1, $body)
     {
@@ -11485,7 +13525,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateJWTProviderWithHttpInfo($id1, $body)
     {
@@ -11530,6 +13570,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -11560,6 +13636,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateJWTProviderResponse',
@@ -11762,7 +13862,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateLDAPProvider($id1, $body)
     {
@@ -11780,7 +13880,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateLDAPProviderWithHttpInfo($id1, $body)
     {
@@ -11825,6 +13925,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -11855,6 +13991,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateLDAPProviderResponse',
@@ -12057,7 +14217,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateSAMLProvider($id1, $body)
     {
@@ -12075,7 +14235,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateSAMLProviderWithHttpInfo($id1, $body)
     {
@@ -12120,6 +14280,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -12150,6 +14346,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1UpdateSAMLProviderResponse',
@@ -12353,7 +14573,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceDeactivateOrgIDP($idpId, $body, $xZitadelOrgid = null)
     {
@@ -12372,7 +14592,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceDeactivateOrgIDPWithHttpInfo($idpId, $body, $xZitadelOrgid = null)
     {
@@ -12417,6 +14637,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -12447,6 +14703,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1DeactivateOrgIDPResponse',
@@ -13518,7 +15798,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceMigrateGenericOIDCProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -13537,7 +15817,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceMigrateGenericOIDCProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -13582,6 +15862,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -13612,6 +15928,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1MigrateGenericOIDCProviderResponse',
@@ -13822,7 +16162,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceReactivateOrgIDP($idpId, $body, $xZitadelOrgid = null)
     {
@@ -13841,7 +16181,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceReactivateOrgIDPWithHttpInfo($idpId, $body, $xZitadelOrgid = null)
     {
@@ -13886,6 +16226,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -13916,6 +16292,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1ReactivateOrgIDPResponse',
@@ -14126,7 +16526,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceRegenerateSAMLProviderCertificate($id, $body, $xZitadelOrgid = null)
     {
@@ -14145,7 +16545,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceRegenerateSAMLProviderCertificateWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -14190,6 +16590,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -14220,6 +16656,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1RegenerateSAMLProviderCertificateResponse',
@@ -15004,7 +17464,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateAppleProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -15023,7 +17483,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateAppleProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -15068,6 +17528,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -15098,6 +17594,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAppleProviderResponse',
@@ -15308,7 +17828,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateAzureADProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -15327,7 +17847,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateAzureADProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -15372,6 +17892,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -15402,6 +17958,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateAzureADProviderResponse',
@@ -15612,7 +18192,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGenericOAuthProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -15631,7 +18211,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGenericOAuthProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -15676,6 +18256,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -15706,6 +18322,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOAuthProviderResponse',
@@ -15916,7 +18556,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGenericOIDCProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -15935,7 +18575,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGenericOIDCProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -15980,6 +18620,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -16010,6 +18686,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGenericOIDCProviderResponse',
@@ -16220,7 +18920,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGitHubEnterpriseServerProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -16239,7 +18939,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGitHubEnterpriseServerProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -16284,6 +18984,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -16314,6 +19050,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubEnterpriseServerProviderResponse',
@@ -16524,7 +19284,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGitHubProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -16543,7 +19303,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGitHubProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -16588,6 +19348,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -16618,6 +19414,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitHubProviderResponse',
@@ -16828,7 +19648,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGitLabProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -16847,7 +19667,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGitLabProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -16892,6 +19712,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -16922,6 +19778,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabProviderResponse',
@@ -17132,7 +20012,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGitLabSelfHostedProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -17151,7 +20031,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGitLabSelfHostedProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -17196,6 +20076,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -17226,6 +20142,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGitLabSelfHostedProviderResponse',
@@ -17436,7 +20376,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateGoogleProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -17455,7 +20395,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateGoogleProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -17500,6 +20440,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -17530,6 +20506,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateGoogleProviderResponse',
@@ -17740,7 +20740,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateJWTProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -17759,7 +20759,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateJWTProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -17804,6 +20804,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -17834,6 +20870,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateJWTProviderResponse',
@@ -18044,7 +21104,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateLDAPProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -18063,7 +21123,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateLDAPProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -18108,6 +21168,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -18138,6 +21234,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateLDAPProviderResponse',
@@ -18348,7 +21468,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateOrgIDP($idpId, $body, $xZitadelOrgid = null)
     {
@@ -18367,7 +21487,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateOrgIDPWithHttpInfo($idpId, $body, $xZitadelOrgid = null)
     {
@@ -18412,6 +21532,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -18442,6 +21598,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPResponse',
@@ -18652,7 +21832,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateOrgIDPJWTConfig($idpId, $body, $xZitadelOrgid = null)
     {
@@ -18671,7 +21851,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateOrgIDPJWTConfigWithHttpInfo($idpId, $body, $xZitadelOrgid = null)
     {
@@ -18716,6 +21896,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -18746,6 +21962,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPJWTConfigResponse',
@@ -18956,7 +22196,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateOrgIDPOIDCConfig($idpId, $body, $xZitadelOrgid = null)
     {
@@ -18975,7 +22215,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateOrgIDPOIDCConfigWithHttpInfo($idpId, $body, $xZitadelOrgid = null)
     {
@@ -19020,6 +22260,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -19050,6 +22326,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateOrgIDPOIDCConfigResponse',
@@ -19260,7 +22560,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceUpdateSAMLProvider($id, $body, $xZitadelOrgid = null)
     {
@@ -19279,7 +22579,7 @@ class IdentityProvidersApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceUpdateSAMLProviderWithHttpInfo($id, $body, $xZitadelOrgid = null)
     {
@@ -19324,6 +22624,42 @@ class IdentityProvidersApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -19354,6 +22690,30 @@ class IdentityProvidersApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1UpdateSAMLProviderResponse',

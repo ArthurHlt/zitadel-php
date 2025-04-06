@@ -5535,7 +5535,7 @@ class SettingsServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function settingsServiceSetSecuritySettings($body)
     {
@@ -5552,7 +5552,7 @@ class SettingsServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function settingsServiceSetSecuritySettingsWithHttpInfo($body)
     {
@@ -5597,6 +5597,42 @@ class SettingsServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5627,6 +5663,30 @@ class SettingsServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Settingsv2betaSetSecuritySettingsResponse',

@@ -8523,7 +8523,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultDomainClaimedMessageText($language1, $body)
     {
@@ -8541,7 +8541,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultDomainClaimedMessageTextWithHttpInfo($language1, $body)
     {
@@ -8586,6 +8586,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -8616,6 +8652,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultDomainClaimedMessageTextResponse',
@@ -8818,7 +8878,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultInitMessageText($language1, $body)
     {
@@ -8836,7 +8896,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultInitMessageTextWithHttpInfo($language1, $body)
     {
@@ -8881,6 +8941,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -8911,6 +9007,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultInitMessageTextResponse',
@@ -9113,7 +9233,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultInviteUserMessageText($language1, $body)
     {
@@ -9131,7 +9251,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultInviteUserMessageTextWithHttpInfo($language1, $body)
     {
@@ -9176,6 +9296,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9206,6 +9362,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultInviteUserMessageTextResponse',
@@ -9408,7 +9588,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultPasswordChangeMessageText($language1, $body)
     {
@@ -9426,7 +9606,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultPasswordChangeMessageTextWithHttpInfo($language1, $body)
     {
@@ -9471,6 +9651,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9501,6 +9717,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordChangeMessageTextResponse',
@@ -9703,7 +9943,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultPasswordResetMessageText($language1, $body)
     {
@@ -9721,7 +9961,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultPasswordResetMessageTextWithHttpInfo($language1, $body)
     {
@@ -9766,6 +10006,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -9796,6 +10072,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordResetMessageTextResponse',
@@ -9998,7 +10298,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultPasswordlessRegistrationMessageText($language1, $body)
     {
@@ -10016,7 +10316,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultPasswordlessRegistrationMessageTextWithHttpInfo($language1, $body)
     {
@@ -10061,6 +10361,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10091,6 +10427,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultPasswordlessRegistrationMessageTextResponse',
@@ -10293,7 +10653,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultVerifyEmailMessageText($language1, $body)
     {
@@ -10311,7 +10671,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultVerifyEmailMessageTextWithHttpInfo($language1, $body)
     {
@@ -10356,6 +10716,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10386,6 +10782,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailMessageTextResponse',
@@ -10588,7 +11008,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultVerifyEmailOTPMessageText($language1, $body)
     {
@@ -10606,7 +11026,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultVerifyEmailOTPMessageTextWithHttpInfo($language1, $body)
     {
@@ -10651,6 +11071,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10681,6 +11137,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyEmailOTPMessageTextResponse',
@@ -10883,7 +11363,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultVerifyPhoneMessageText($language1, $body)
     {
@@ -10901,7 +11381,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultVerifyPhoneMessageTextWithHttpInfo($language1, $body)
     {
@@ -10946,6 +11426,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -10976,6 +11492,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifyPhoneMessageTextResponse',
@@ -11178,7 +11718,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceSetDefaultVerifySMSOTPMessageText($language1, $body)
     {
@@ -11196,7 +11736,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceSetDefaultVerifySMSOTPMessageTextWithHttpInfo($language1, $body)
     {
@@ -11241,6 +11781,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -11271,6 +11847,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetDefaultVerifySMSOTPMessageTextResponse',
@@ -20084,7 +20684,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomDomainClaimedMessageCustomText($language, $body, $xZitadelOrgid = null)
     {
@@ -20103,7 +20703,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomDomainClaimedMessageCustomTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -20148,6 +20748,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -20178,6 +20814,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomDomainClaimedMessageTextResponse',
@@ -20388,7 +21048,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomInitMessageText($language, $body, $xZitadelOrgid = null)
     {
@@ -20407,7 +21067,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomInitMessageTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -20452,6 +21112,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -20482,6 +21178,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomInitMessageTextResponse',
@@ -20692,7 +21412,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomInviteUserMessageCustomText($language, $body, $xZitadelOrgid = null)
     {
@@ -20711,7 +21431,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomInviteUserMessageCustomTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -20756,6 +21476,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -20786,6 +21542,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomInviteUserMessageTextResponse',
@@ -20996,7 +21776,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomPasswordChangeMessageCustomText($language, $body, $xZitadelOrgid = null)
     {
@@ -21015,7 +21795,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomPasswordChangeMessageCustomTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -21060,6 +21840,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -21090,6 +21906,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordChangeMessageTextResponse',
@@ -21300,7 +22140,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomPasswordResetMessageText($language, $body, $xZitadelOrgid = null)
     {
@@ -21319,7 +22159,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomPasswordResetMessageTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -21364,6 +22204,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -21394,6 +22270,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordResetMessageTextResponse',
@@ -21604,7 +22504,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomPasswordlessRegistrationMessageCustomText($language, $body, $xZitadelOrgid = null)
     {
@@ -21623,7 +22523,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomPasswordlessRegistrationMessageCustomTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -21668,6 +22568,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -21698,6 +22634,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomPasswordlessRegistrationMessageTextResponse',
@@ -21908,7 +22868,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomVerifyEmailMessageText($language, $body, $xZitadelOrgid = null)
     {
@@ -21927,7 +22887,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomVerifyEmailMessageTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -21972,6 +22932,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -22002,6 +22998,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailMessageTextResponse',
@@ -22212,7 +23232,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomVerifyEmailOTPMessageText($language, $body, $xZitadelOrgid = null)
     {
@@ -22231,7 +23251,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomVerifyEmailOTPMessageTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -22276,6 +23296,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -22306,6 +23362,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyEmailOTPMessageTextResponse',
@@ -22516,7 +23596,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomVerifyPhoneMessageText($language, $body, $xZitadelOrgid = null)
     {
@@ -22535,7 +23615,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomVerifyPhoneMessageTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -22580,6 +23660,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -22610,6 +23726,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomVerifyPhoneMessageTextResponse',
@@ -22820,7 +23960,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceSetCustomVerifySMSOTPMessageText($language, $body, $xZitadelOrgid = null)
     {
@@ -22839,7 +23979,7 @@ class MessageTextsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceSetCustomVerifySMSOTPMessageTextWithHttpInfo($language, $body, $xZitadelOrgid = null)
     {
@@ -22884,6 +24024,42 @@ class MessageTextsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -22914,6 +24090,30 @@ class MessageTextsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1SetCustomVerifySMSOTPMessageTextResponse',

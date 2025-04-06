@@ -184,7 +184,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function zITADELUserSchemasCreateUserSchema($userSchema, $instanceId = null, $instanceDomain = null)
     {
@@ -203,7 +203,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function zITADELUserSchemasCreateUserSchemaWithHttpInfo($userSchema, $instanceId = null, $instanceDomain = null)
     {
@@ -260,6 +260,30 @@ class ZITADELUserSchemasApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -298,6 +322,22 @@ class ZITADELUserSchemasApi
                     $e->setResponseObject($data);
                     break;
                 case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V3alphaCreateUserSchemaResponse',
@@ -504,7 +544,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function zITADELUserSchemasDeactivateUserSchema($id, $instanceId = null, $instanceDomain = null)
     {
@@ -523,7 +563,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function zITADELUserSchemasDeactivateUserSchemaWithHttpInfo($id, $instanceId = null, $instanceDomain = null)
     {
@@ -568,6 +608,42 @@ class ZITADELUserSchemasApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -598,6 +674,30 @@ class ZITADELUserSchemasApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V3alphaDeactivateUserSchemaResponse',
@@ -1387,7 +1487,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function zITADELUserSchemasPatchUserSchema($id, $userSchema, $instanceId = null, $instanceDomain = null)
     {
@@ -1407,7 +1507,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function zITADELUserSchemasPatchUserSchemaWithHttpInfo($id, $userSchema, $instanceId = null, $instanceDomain = null)
     {
@@ -1452,6 +1552,42 @@ class ZITADELUserSchemasApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1482,6 +1618,30 @@ class ZITADELUserSchemasApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V3alphaPatchUserSchemaResponse',
@@ -1705,7 +1865,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function zITADELUserSchemasReactivateUserSchema($id, $instanceId = null, $instanceDomain = null)
     {
@@ -1724,7 +1884,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function zITADELUserSchemasReactivateUserSchemaWithHttpInfo($id, $instanceId = null, $instanceDomain = null)
     {
@@ -1769,6 +1929,42 @@ class ZITADELUserSchemasApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1799,6 +1995,30 @@ class ZITADELUserSchemasApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V3alphaReactivateUserSchemaResponse',
@@ -2011,7 +2231,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function zITADELUserSchemasSearchUserSchemas($filters, $instanceId = null, $instanceDomain = null, $queryOffset = null, $queryLimit = null, $queryDesc = null, $sortingColumn = 'FIELD_NAME_UNSPECIFIED')
     {
@@ -2034,7 +2254,7 @@ class ZITADELUserSchemasApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function zITADELUserSchemasSearchUserSchemasWithHttpInfo($filters, $instanceId = null, $instanceDomain = null, $queryOffset = null, $queryLimit = null, $queryDesc = null, $sortingColumn = 'FIELD_NAME_UNSPECIFIED')
     {
@@ -2091,6 +2311,42 @@ class ZITADELUserSchemasApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2132,6 +2388,30 @@ class ZITADELUserSchemasApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V3alphaSearchUserSchemasResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

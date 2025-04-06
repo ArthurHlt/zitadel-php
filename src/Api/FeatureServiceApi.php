@@ -4550,7 +4550,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetInstanceFeatures($body)
     {
@@ -4567,7 +4567,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetInstanceFeaturesWithHttpInfo($body)
     {
@@ -4612,6 +4612,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4642,6 +4678,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2SetInstanceFeaturesResponse',
@@ -4826,7 +4886,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetInstanceFeatures_0($body)
     {
@@ -4843,7 +4903,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetInstanceFeatures_0WithHttpInfo($body)
     {
@@ -4888,6 +4948,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -4918,6 +5014,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2betaSetInstanceFeaturesResponse',
@@ -5103,7 +5223,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetOrganizationFeatures($organizationId, $body)
     {
@@ -5121,7 +5241,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetOrganizationFeaturesWithHttpInfo($organizationId, $body)
     {
@@ -5166,6 +5286,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5196,6 +5352,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2SetOrganizationFeaturesResponse',
@@ -5398,7 +5578,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetOrganizationFeatures_0($organizationId, $body)
     {
@@ -5416,7 +5596,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetOrganizationFeatures_0WithHttpInfo($organizationId, $body)
     {
@@ -5461,6 +5641,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5491,6 +5707,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2betaSetOrganizationFeaturesResponse',
@@ -5692,7 +5932,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetSystemFeatures($body)
     {
@@ -5709,7 +5949,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetSystemFeaturesWithHttpInfo($body)
     {
@@ -5754,6 +5994,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -5784,6 +6060,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2SetSystemFeaturesResponse',
@@ -5968,7 +6268,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetSystemFeatures_0($body)
     {
@@ -5985,7 +6285,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetSystemFeatures_0WithHttpInfo($body)
     {
@@ -6030,6 +6330,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6060,6 +6396,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2betaSetSystemFeaturesResponse',
@@ -6245,7 +6605,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetUserFeatures($userId, $body)
     {
@@ -6263,7 +6623,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetUserFeaturesWithHttpInfo($userId, $body)
     {
@@ -6308,6 +6668,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6338,6 +6734,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2SetUserFeaturesResponse',
@@ -6540,7 +6960,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function featureServiceSetUserFeatures_0($userId, $body)
     {
@@ -6558,7 +6978,7 @@ class FeatureServiceApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function featureServiceSetUserFeatures_0WithHttpInfo($userId, $body)
     {
@@ -6603,6 +7023,42 @@ class FeatureServiceApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -6633,6 +7089,30 @@ class FeatureServiceApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Featurev2betaSetUserFeaturesResponse',

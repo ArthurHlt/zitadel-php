@@ -182,7 +182,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddIDPToLoginPolicy($body)
     {
@@ -199,7 +199,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddIDPToLoginPolicyWithHttpInfo($body)
     {
@@ -244,6 +244,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -274,6 +310,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddIDPToLoginPolicyResponse',
@@ -458,7 +518,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddMultiFactorToLoginPolicy($body)
     {
@@ -475,7 +535,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddMultiFactorToLoginPolicyWithHttpInfo($body)
     {
@@ -532,6 +592,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -573,6 +669,30 @@ class LoginSettingsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddMultiFactorToLoginPolicyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,7 +874,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceAddSecondFactorToLoginPolicy($body)
     {
@@ -771,7 +891,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceAddSecondFactorToLoginPolicyWithHttpInfo($body)
     {
@@ -828,6 +948,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -869,6 +1025,30 @@ class LoginSettingsApi
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1AddSecondFactorToLoginPolicyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1050,7 +1230,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceListLoginPolicyIDPs($body)
     {
@@ -1067,7 +1247,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceListLoginPolicyIDPsWithHttpInfo($body)
     {
@@ -1112,6 +1292,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1142,6 +1358,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyIDPsResponse',
@@ -1325,7 +1565,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceListLoginPolicyMultiFactors()
     {
@@ -1341,7 +1581,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceListLoginPolicyMultiFactorsWithHttpInfo()
     {
@@ -1386,6 +1626,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1416,6 +1692,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicyMultiFactorsResponse',
@@ -1584,7 +1884,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceListLoginPolicySecondFactors()
     {
@@ -1600,7 +1900,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceListLoginPolicySecondFactorsWithHttpInfo()
     {
@@ -1645,6 +1945,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1675,6 +2011,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadeladminv1ListLoginPolicySecondFactorsResponse',
@@ -2718,7 +3078,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function adminServiceUpdateLoginPolicy($body)
     {
@@ -2735,7 +3095,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function adminServiceUpdateLoginPolicyWithHttpInfo($body)
     {
@@ -2780,6 +3140,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2810,6 +3206,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1UpdateLoginPolicyResponse',
@@ -2995,7 +3415,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceAddCustomLoginPolicy($body, $xZitadelOrgid = null)
     {
@@ -3013,7 +3433,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceAddCustomLoginPolicyWithHttpInfo($body, $xZitadelOrgid = null)
     {
@@ -3058,6 +3478,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3088,6 +3544,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\V1AddCustomLoginPolicyResponse',
@@ -3547,7 +4027,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
+     * @return \ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus
      */
     public function managementServiceListLoginPolicyMultiFactors($xZitadelOrgid = null)
     {
@@ -3564,7 +4044,7 @@ class LoginSettingsApi
      *
      * @throws \ArthurHlt\Zitadel\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse|\ArthurHlt\Zitadel\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function managementServiceListLoginPolicyMultiFactorsWithHttpInfo($xZitadelOrgid = null)
     {
@@ -3609,6 +4089,42 @@ class LoginSettingsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
+                case 201:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 202:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 203:
+                    if ('\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 default:
                     if ('\ArthurHlt\Zitadel\Model\RpcStatus' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3639,6 +4155,30 @@ class LoginSettingsApi
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 202:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 203:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\ArthurHlt\Zitadel\Model\Zitadelmanagementv1ListLoginPolicyMultiFactorsResponse',
