@@ -163,14 +163,10 @@
     "https"
   ],
   "consumes": [
-    "application/json",
-    "application/grpc",
-    "application/grpc-web+proto"
+    "application/json"
   ],
   "produces": [
-    "application/json",
-    "application/grpc",
-    "application/grpc-web+proto"
+    "application/json"
   ],
   "paths": {
     "/": {
@@ -34802,7 +34798,7 @@
         },
         "callbackUrl": {
           "type": "string",
-          "example": "https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA\u0026state=af0ifjsldkj",
+          "example": "https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=af0ifjsldkj",
           "description": "Callback URL where the user should be redirected, using a \"302 FOUND\" status. Contains details for the application to obtain the tokens on success, or error details on failure. Note that this field must be treated as credentials, as the contained code can be used to obtain tokens on behalve of the user."
         }
       }
@@ -34920,7 +34916,7 @@
         },
         "callbackUrl": {
           "type": "string",
-          "example": "https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA\u0026state=af0ifjsldkj",
+          "example": "https://client.example.org/cb?code=SplxlOBeZQQYbYS6WxSbIA&state=af0ifjsldkj",
           "description": "Callback URL where the user should be redirected, using a \"302 FOUND\" status. Contains details for the application to obtain the tokens on success, or error details on failure. Note that this field must be treated as credentials, as the contained code can be used to obtain tokens on behalve of the user."
         }
       }
@@ -35884,7 +35880,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/otp/verify?userID={{.UserID}}\u0026code={{.Code}}",
+          "example": "https://example.com/otp/verify?userID={{.UserID}}&code={{.Code}}",
           "description": "Optionally set a url_template, which will be used in the mail sent by ZITADEL to guide the user to your verification page.\nIf no template is set, the default ZITADEL url will be used.\n\nThe following placeholders can be used: Code, UserID, LoginName, DisplayName, PreferredLanguage, SessionID",
           "maxLength": 200,
           "minLength": 1
@@ -36440,7 +36436,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/otp/verify?userID={{.UserID}}\u0026code={{.Code}}",
+          "example": "https://example.com/otp/verify?userID={{.UserID}}&code={{.Code}}",
           "description": "\"Optionally set a url_template, which will be used in the mail sent by ZITADEL to guide the user to your verification page. If no template is set, the default ZITADEL url will be used.\"",
           "maxLength": 200,
           "minLength": 1
@@ -39299,7 +39295,7 @@
         },
         "uri": {
           "type": "string",
-          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1\u0026digits=6\u0026issuer=ZITADEL\u0026period=30\u0026secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK"
+          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1&digits=6&issuer=ZITADEL&period=30&secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK"
         },
         "secret": {
           "type": "string",
@@ -39443,7 +39439,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/email/verify?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/email/verify?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "Optionally set a url_template, which will be used in the verification mail sent by ZITADEL to guide the user to your verification page.\nIf no template is set, the default ZITADEL url will be used.\n\nThe following placeholders can be used: UserID, OrgID, Code",
           "maxLength": 200,
           "minLength": 1
@@ -39455,7 +39451,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/passkey/register?userID={{.UserID}}\u0026orgID={{.OrgID}}\u0026codeID={{.CodeID}}\u0026code={{.Code}}",
+          "example": "https://example.com/passkey/register?userID={{.UserID}}&orgID={{.OrgID}}&codeID={{.CodeID}}&code={{.Code}}",
           "description": "Optionally set a url_template, which will be used in the mail sent by ZITADEL to guide the user to your passkey registration page.\nIf no template is set, the default ZITADEL url will be used.\n\nThe following placeholders can be used: UserID, OrgID, CodeID, Code",
           "maxLength": 200,
           "minLength": 1
@@ -39470,7 +39466,7 @@
         },
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/password/changey?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/password/changey?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "Optionally set a url_template, which will be used in the password reset mail sent by ZITADEL to guide the user to your password change page.\nIf no template is set, the default ZITADEL url will be used.\n\nThe following placeholders can be used: UserID, OrgID, Code",
           "maxLength": 200,
           "minLength": 1
@@ -39671,7 +39667,7 @@
         },
         "authUrl": {
           "type": "string",
-          "example": "https://accounts.google.com/o/oauth2/v2/auth?client_id=clientID\u0026callback=https%3A%2F%2Fzitadel.cloud%2Fidps%2Fcallback",
+          "example": "https://accounts.google.com/o/oauth2/v2/auth?client_id=clientID&callback=https%3A%2F%2Fzitadel.cloud%2Fidps%2Fcallback",
           "description": "URL to which the client should redirect"
         },
         "idpIntent": {
@@ -41087,7 +41083,7 @@
         },
         "uri": {
           "type": "string",
-          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1\u0026digits=6\u0026issuer=ZITADEL\u0026period=30\u0026secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK"
+          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1&digits=6&issuer=ZITADEL&period=30&secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK"
         },
         "secret": {
           "type": "string",
@@ -41231,7 +41227,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/email/verify?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/email/verify?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "\"Optionally set a url_template, which will be used in the verification mail sent by ZITADEL to guide the user to your verification page. If no template is set, the default ZITADEL url will be used.\"",
           "maxLength": 200,
           "minLength": 1
@@ -41243,7 +41239,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/passkey/register?userID={{.UserID}}\u0026orgID={{.OrgID}}\u0026codeID={{.CodeID}}\u0026code={{.Code}}",
+          "example": "https://example.com/passkey/register?userID={{.UserID}}&orgID={{.OrgID}}&codeID={{.CodeID}}&code={{.Code}}",
           "description": "\"Optionally set a url_template, which will be used in the mail sent by ZITADEL to guide the user to your passkey registration page. If no template is set, the default ZITADEL url will be used.\"",
           "maxLength": 200,
           "minLength": 1
@@ -41258,7 +41254,7 @@
         },
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/password/changey?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/password/changey?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "\"Optionally set a url_template, which will be used in the password reset mail sent by ZITADEL to guide the user to your password change page. If no template is set, the default ZITADEL url will be used.\"",
           "maxLength": 200,
           "minLength": 1
@@ -41459,7 +41455,7 @@
         },
         "authUrl": {
           "type": "string",
-          "example": "https://accounts.google.com/o/oauth2/v2/auth?client_id=clientID\u0026callback=https%3A%2F%2Fzitadel.cloud%2Fidps%2Fcallback",
+          "example": "https://accounts.google.com/o/oauth2/v2/auth?client_id=clientID&callback=https%3A%2F%2Fzitadel.cloud%2Fidps%2Fcallback",
           "description": "URL to which the client should redirect"
         },
         "idpIntent": {
@@ -42308,7 +42304,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/email/verify?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/email/verify?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "Optionally set a url_template, which will be used in the verification mail sent by ZITADEL\nto guide the user to your verification page.\nIf no template is set, the default ZITADEL url will be used.",
           "maxLength": 200,
           "minLength": 1
@@ -42460,7 +42456,7 @@
         },
         "authUrl": {
           "type": "string",
-          "example": "https://accounts.google.com/o/oauth2/v2/auth?client_id=clientID\u0026callback=https%3A%2F%2Fzitadel.cloud%2Fidps%2Fcallback",
+          "example": "https://accounts.google.com/o/oauth2/v2/auth?client_id=clientID&callback=https%3A%2F%2Fzitadel.cloud%2Fidps%2Fcallback",
           "description": "The authentication URL to which the client should redirect."
         },
         "idpIntent": {
@@ -43584,7 +43580,7 @@
       "properties": {
         "url": {
           "type": "string",
-          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1\u0026digits=6\u0026issuer=ZITADEL\u0026period=30\u0026secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK"
+          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1&digits=6&issuer=ZITADEL&period=30&secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK"
         },
         "secret": {
           "type": "string",
@@ -43634,7 +43630,7 @@
         },
         "link": {
           "type": "string",
-          "example": "https://acme.com/ui/login/login/passwordless/init?userID=182156264229306625\u0026orgID=165947650742997249\u0026codeID=200949504189388947\u0026code=kFfsO8OizZPS"
+          "example": "https://acme.com/ui/login/login/passwordless/init?userID=182156264229306625&orgID=165947650742997249&codeID=200949504189388947&code=kFfsO8OizZPS"
         },
         "expiration": {
           "type": "string",
@@ -53255,7 +53251,7 @@
         "domain": {
           "type": "string",
           "example": "zitadel.cloud",
-          "description": "ZITADEL generates a domain (\u003corg-name\u003e.zitadel.ch) for an organization, the field is not required",
+          "description": "ZITADEL generates a domain (<org-name>.zitadel.ch) for an organization, the field is not required",
           "maxLength": 200
         }
       },
@@ -55469,7 +55465,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/user/invite?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/user/invite?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "Optionally set a url_template, which will be used in the invite mail sent by ZITADEL to guide the user to your invitation page.\nIf no template is set, the default ZITADEL url will be used.\n\nThe following placeholders can be used: UserID, OrgID, Code",
           "maxLength": 200,
           "minLength": 1
@@ -56610,7 +56606,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/password/changey?userID={{.UserID}}\u0026code={{.Code}}\u0026orgID={{.OrgID}}",
+          "example": "https://example.com/password/changey?userID={{.UserID}}&code={{.Code}}&orgID={{.OrgID}}",
           "description": "Optionally set a url_template, which will be used in the password reset mail\nsent by ZITADEL to guide the user to your password change page.\nIf no template is set, the default ZITADEL url will be used.",
           "maxLength": 200,
           "minLength": 1
@@ -56625,7 +56621,7 @@
       "properties": {
         "urlTemplate": {
           "type": "string",
-          "example": "https://example.com/passkey/register?userID={{.UserID}}\u0026orgID={{.OrgID}}\u0026codeID={{.CodeID}}\u0026code={{.Code}}",
+          "example": "https://example.com/passkey/register?userID={{.UserID}}&orgID={{.OrgID}}&codeID={{.CodeID}}&code={{.Code}}",
           "description": "Optionally set a url_template, which will be used in the mail sent by ZITADEL\nto guide the user to your passkey registration page.\nIf no template is set, the default ZITADEL url will be used.",
           "maxLength": 200,
           "minLength": 1
@@ -56763,7 +56759,7 @@
         },
         "uri": {
           "type": "string",
-          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1\u0026digits=6\u0026issuer=ZITADEL\u0026period=30\u0026secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK",
+          "example": "otpauth://totp/ZITADEL:gigi@acme.zitadel.cloud?algorithm=SHA1&digits=6&issuer=ZITADEL&period=30&secret=TJOPWSDYILLHXFV4MLKNNJOWFG7VSDCK",
           "description": "The TOTP URI, which can be used to create a QR Code for scanning with an authenticator app."
         },
         "secret": {

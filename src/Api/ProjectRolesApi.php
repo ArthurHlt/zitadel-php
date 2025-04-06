@@ -418,8 +418,8 @@ class ProjectRolesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json', 'application/grpc', 'application/grpc-web+proto'],
-            'application/jsonapplication/grpcapplication/grpc-web+proto',
+            ['application/json'],
+            'application/json',
             $multipart
         );
 
@@ -722,8 +722,8 @@ class ProjectRolesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json', 'application/grpc', 'application/grpc-web+proto'],
-            'application/jsonapplication/grpcapplication/grpc-web+proto',
+            ['application/json'],
+            'application/json',
             $multipart
         );
 
@@ -1026,8 +1026,8 @@ class ProjectRolesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json', 'application/grpc', 'application/grpc-web+proto'],
-            'application/jsonapplication/grpcapplication/grpc-web+proto',
+            ['application/json'],
+            'application/json',
             $multipart
         );
 
@@ -1338,7 +1338,7 @@ class ProjectRolesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json', 'application/grpc', 'application/grpc-web+proto'],
+            ['application/json'],
             '',
             $multipart
         );
@@ -1655,8 +1655,8 @@ class ProjectRolesApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json', 'application/grpc', 'application/grpc-web+proto'],
-            'application/jsonapplication/grpcapplication/grpc-web+proto',
+            ['application/json'],
+            'application/json',
             $multipart
         );
 

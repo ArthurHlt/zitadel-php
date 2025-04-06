@@ -34,14 +34,8 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
 
 ```json
 {
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/arthurhlt/zitadel-php.git"
-    }
-  ],
   "require": {
-    "arthurhlt/zitadel-php": "*@dev"
+    "arthurhlt/zitadel-php": "^0.3"
   }
 }
 ```

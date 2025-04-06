@@ -379,7 +379,7 @@ class RestrictionsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/json', 'application/grpc', 'application/grpc-web+proto'],
+            ['application/json'],
             '',
             $multipart
         );

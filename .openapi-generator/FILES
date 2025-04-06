@@ -1,6 +1,4 @@
 .gitignore
-.travis.yml
-README.md
 docs/Api/ActionsApi.md
 docs/Api/AdminServiceApi.md
 docs/Api/ApplicationsApi.md
